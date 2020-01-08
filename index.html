@@ -1,43 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <title>React Hello World</title>
     <title>Document</title>
+    <link href='style.css' rel='stylesheet' type='text/css' />
 </head>
 <body>
-    <div id="application-root"></div>
+    <div id='application-root'></div>
   
   <script
-    src="https://unpkg.com/react@16/umd/react.development.js">
+    src='https://unpkg.com/react@16/umd/react.development.js'>
   </script>
   <script
-    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'>
   </script>
   <script
-    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    src='https://unpkg.com/babel-standalone@6/babel.min.js'>
   </script>
   
-  <script type="text/babel">
+  <script type='text/babel'>
 
-function App(props) {
+function App(prop) {
   return (
-    <header>
-      {props.children}
-    </header>
+    <div>
+        <nav>
+            <ul>
+            <li><a href='#home' target='_blank'>Home</a></li>
+            <li><a href='#education'>Education</a></li>
+            <li><a href='#history'>Employment History</a></li>
+        </ul>
+        </nav>
+        <h1 className='home'>{prop.name}</h1>
+        <section className='contact' > Aspiring Full Stack Developer </section>
+        <address className='contact'> <a href='sallystudent@gmail.com' target='_blank' >sallystudent@gmail.com</a> </address>
+        <section className='contact'> Phone Number: 999-999-9999</section>
+        <div className='image'>
+            <img src='https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg' alt='Sally Smith Picture' height='500' Width='300'/>
+        </div>
+
+        <h2 className='education description'> Education:</h2>
+        <ul>
+            <li className='list'> Kaiolani Community College (1998-2001)</li>
+            <li className='list'> University of Hawaii at Manoa (2001-2003)</li>
+        </ul>
+
+        <h2 className='history description'>Employment History:</h2>
+        <ul>
+            <li className='list'> Microsoft Inc - Software Engineering Intern (Jan 2001- Feb 2002)
+            <ul> 
+                <li> Assiting Senior Developer in creating Web apps in Javascript</li>
+                <li> Data  Entry</li>
+            </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li  className='list'> Udemy Inc -Python Web Development Intern (March 2002- May 2003)
+            <ul> 
+                <li> Creating active websites with python </li>
+                <li> Data analytics</li>
+            </ul>
+            </li>
+        </ul>
+  </div>
   );
 }
 
 // Nested elements inside the App
 ReactDOM.render(
-  <App className='my-class'>
-    <h1>Current Page Title!</h1>
-  </App>,
+  <App name=''/>,
   document.querySelector('#application-root')
 );
 
-  </script>
+</script>
+
   </body>
 </html>

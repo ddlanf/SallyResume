@@ -1,0 +1,64 @@
+body{
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  }
+  
+  nav{
+    color:black;
+  }
+  
+  main{
+    color: white;
+  }
+  
+  .home{
+    font-size: 30;
+    margin-bottom: 5px;
+  }
+  
+  .contact, .image, .home{
+    text-align: center;
+  }
+  
+  .contact{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif
+  }
+  
+  ul.desription, li.list{
+    list-style: none;
+  }
+  
+  .description::before{
+    content: "\263B";
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+    font-size: 30px;
+  }
+  
+  .education{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1px;
+  }
+  
+  .history{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 3px;
+  }
+  
+  li.list{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+  }
+  li.list::before{
+    content: "\263A";
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+    font-size: 20px;
+  }
+  
+  footer{
+   margin-bottom: 60px;
+  }
+  
